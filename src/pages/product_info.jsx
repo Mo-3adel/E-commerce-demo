@@ -40,7 +40,7 @@ const ProductDetails = () => {
 
          <div className="flex justify-center items-center gap-2">
                 <button
-                  onClick={() => dispatch(addToCart(cartItem))}
+                  onClick={() => dispatch(addToCart(product))}
                   className="bg-sky-900 text-amber-100 px-4 py-2 rounded hover:bg-sky-700"
                 >
                   Buy Now
@@ -48,7 +48,7 @@ const ProductDetails = () => {
                 
                 {cartItem && cartItem.quantity > 0 && (
                   <button
-                    onClick={() => dispatch(decreaseQuantity(cartItem.id))}
+                    onClick={() => dispatch(decreaseQuantity(product.id))}
                     className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-700"
                   >
                     -
