@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const product = products.find(p => p.id === Number(id));
   const cart = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
-  const cartItem = cart.find(item => item.id === product.id);
+  const cartItem = cart.find(product => product.id === product.id);
 
 
   if (!product) {
@@ -19,7 +19,7 @@ const ProductDetails = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-sky-900 p-6">
-      <div className="bg-amber-100 shadow-amber-300 shadow-lg rounded-xl p-8 max-w-lg text-center">
+      <div className="bg-amber-100 shadow-amber-100 shadow-lg rounded-xl p-8 max-w-lg text-center">
         <img src={product.image} alt={product.name} className="w-80 h-80 object-cover rounded-lg mx-auto mb-4" />
         <h1 className="text-2xl font-bold text-sky-900 mb-2">{product.name}</h1>
         <p className="mb-4 text-gray-700">{product.fullDescription}</p>
@@ -45,12 +45,7 @@ const ProductDetails = () => {
                 >
                   Buy Now
                 </button>
-                <Link
-                  to="/product"
-                  className="bg-sky-900 text-amber-100 px-4 py-2 rounded hover:bg-sky-700 inline-block"
-                >
-                  Back
-                </Link>
+                
                 {cartItem && cartItem.quantity > 0 && (
                   <button
                     onClick={() => dispatch(decreaseQuantity(cartItem.id))}
@@ -58,7 +53,14 @@ const ProductDetails = () => {
                   >
                     -
                   </button>
+                  
                 )}
+                <Link
+                  to="/products"
+                  className="bg-sky-900 text-amber-100 px-4 py-2 rounded hover:bg-sky-700 inline-block"
+                >
+                  Back
+                </Link>
               </div>
               {cartItem && cartItem.quantity > 0 && (
                 <div className="mt-2 text-gray-700">In Cart: {cartItem.quantity}</div>
