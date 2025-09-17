@@ -58,10 +58,12 @@ src/
     contact.jsx
     privacy.jsx
     products.jsx
+    prduct_info.jsx
   Hooks/
-    cart.js
+    product_details.js
   redux/
     store.js
+    cart.js
   App.jsx
   App.css
 ```
