@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const product = products.find(p => p.id === Number(id));
   const cart = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
-  const cartItem = cart.find(product => product.id === product.id);
+  const cartItem = cart.find(item => item.id === product.id);
 
 
   if (!product) {
