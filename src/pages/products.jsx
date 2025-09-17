@@ -30,7 +30,7 @@ const Products = () => {
                   Buy Now
                 </button>
                 <Link
-                    to={`/products/${product.id}`} 
+                    to={`/product/${product.id}`} 
                     className="bg-sky-900 text-amber-100 px-4 py-2 rounded hover:bg-sky-700 inline-block"
                 >
                     Info
