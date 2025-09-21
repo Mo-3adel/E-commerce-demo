@@ -28,7 +28,7 @@ Browse smart products, view details, and manage your cart with a clean, responsi
 ![Homepage](public/screenshots/home.png)
 
 ### Products Page  
-![Products Page](./screenshots/products.png) 
+![Products Page](public/screenshots/products.png) 
 
 ### 📦 Product Details
 ![Product Details](public/screenshots/product-details.png)
