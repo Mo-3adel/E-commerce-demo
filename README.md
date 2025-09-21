@@ -36,7 +36,6 @@ Browse smart products, view details, and manage your cart with a clean, responsi
 ### 🛍️ Cart
 ![Cart](public/screenshots/cart.png)
 
-*(Optional: add a short demo GIF here if you have one!)*
 
 ---
 
